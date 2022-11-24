@@ -96,6 +96,12 @@ let passwordEl1 = document.getElementById("password1");
 let passwordEl2 = document.getElementById("password2");
 
 function passwordGenerator() {
-  passwordEl1.textContent = "password1";
-  passwordEl2.textContent = "password2";
+  passwordEl1.textContent = "";
+  passwordEl2.textContent = "";
+  for (let i = 0; i < 15; i++) {
+    let char1 = characters[Math.floor(Math.random() * characters.length)];
+    let char2 = characters[Math.floor(Math.random() * characters.length)];
+    passwordEl1.textContent += char1;
+    passwordEl2.textContent += char2;
+  }
 }
