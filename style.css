@@ -32,15 +32,16 @@ button:hover {
 .container {
   background: #1f2937;
   width: 550px;
-  height: 430px;
+
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-  padding: 100px 52px;
+  padding: 52px;
 }
 .headerTwo {
   color: #10b981;
 }
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -80,4 +81,11 @@ button:hover {
 #value_display {
   color: #10b981;
   font-size: 20px;
+}
+#check-box-message {
+  color: orange;
+  font-style: italic;
+}
+fieldset {
+  margin-top: 20px;
 }

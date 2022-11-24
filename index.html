@@ -23,10 +23,27 @@
     <div class="container">
       <h1>Generate a</h1>
       <h1 class="headerTwo">Random password</h1>
-      <p>Never use an insecure password again.</p>
+      <p class="slogan">Never use an insecure password again.</p>
+      <hr>
+<p id="check-box-message"></p>
+<fieldset>
+  <legend>Check character type you want</legend>
+  <div>
+    <input type="checkbox" id="numeric" name="array" value="numeric" checked="checked"/>
+    <label for="numeric">Numeric</label>
+  </div>
+  <div>
+    <input type="checkbox" id="alfa" name="array" value="alfa" />
+    <label for="alfa">Alfa</label>
+  </div>
+  <div>
+    <input type="checkbox" id="special-char" name="array" value="special-char" />
+    <label for="special-char">Special characters</label>
+  </div>
+</fieldset>
 
 <div class="slidecontainer">
-  <p>How many Characters do you want?: <span id="value_display"></span></p>
+  <p>How many characters do you want?: <span id="value_display">15</span></p>
   <input type="range" min="4" max="64" value="15" id="main" onInput="change_value()">
   <p id="value_display"></p>
 </div>

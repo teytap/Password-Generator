@@ -1,4 +1,4 @@
-const characters = [
+const alfas = [
   "A",
   "B",
   "C",
@@ -51,16 +51,9 @@ const characters = [
   "x",
   "y",
   "z",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
+];
+const numerics = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const specialChars = [
   "~",
   "`",
   "!",
@@ -96,15 +89,35 @@ let passwordEl1 = document.getElementById("password1");
 let passwordEl2 = document.getElementById("password2");
 let copyEl = document.getElementById("copy");
 let copyEl2 = document.getElementById("copy2");
+let val = 15;
 
 function passwordGenerator() {
+  let numericEl = document.getElementById("numeric");
+  let alfaEl = document.getElementById("alfa");
+  let specialCharEl = document.getElementById("special-char");
+  let chars = [];
+  if (!numericEl.checked && !alfaEl.checked && !specialCharEl.checked) {
+    let checkMessage = document.getElementById("check-box-message");
+    checkMessage.textContent = "Check at least one type!";
+
+    return 0;
+  }
+  if (numericEl.checked) {
+    chars = chars.concat(numerics);
+  }
+  if (alfaEl.checked) {
+    chars = chars.concat(alfas);
+  }
+  if (specialCharEl.checked) {
+    chars = chars.concat(specialChars);
+  }
   passwordEl1.value = "";
   passwordEl2.value = "";
   copyEl.style.color = "white";
   copyEl2.style.color = "white";
   for (let i = 0; i < val; i++) {
-    let char1 = characters[Math.floor(Math.random() * characters.length)];
-    let char2 = characters[Math.floor(Math.random() * characters.length)];
+    let char1 = chars[Math.floor(Math.random() * chars.length)];
+    let char2 = chars[Math.floor(Math.random() * chars.length)];
     passwordEl1.value += char1;
     passwordEl2.value += char2;
   }
