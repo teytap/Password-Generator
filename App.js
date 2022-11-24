@@ -102,7 +102,7 @@ function passwordGenerator() {
   passwordEl2.value = "";
   copyEl.style.color = "white";
   copyEl2.style.color = "white";
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < val; i++) {
     let char1 = characters[Math.floor(Math.random() * characters.length)];
     let char2 = characters[Math.floor(Math.random() * characters.length)];
     passwordEl1.value += char1;
@@ -120,4 +120,9 @@ function copy() {
   navigator.clipboard.writeText(copyText).then(() => {
     alert("Copied to clipboard");
   });
+}
+function change_value(e) {
+  val = document.getElementById("main").value;
+  display = document.getElementById("value_display");
+  display.textContent = val;
 }

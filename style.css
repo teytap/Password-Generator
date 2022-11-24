@@ -16,7 +16,7 @@ button {
   padding: 9px 17px 9px 15px;
   width: 190px;
   height: 42px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 30px;
   border-radius: 6px;
   border: none;
@@ -76,4 +76,8 @@ button:hover {
   border: none;
   padding-top: 5px;
   top: -4px;
+}
+#value_display {
+  color: #10b981;
+  font-size: 20px;
 }

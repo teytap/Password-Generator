@@ -24,6 +24,13 @@
       <h1>Generate a</h1>
       <h1 class="headerTwo">Random password</h1>
       <p>Never use an insecure password again.</p>
+
+<div class="slidecontainer">
+  <p>How many Characters do you want?: <span id="value_display"></span></p>
+  <input type="range" min="4" max="64" value="15" id="main" onInput="change_value()">
+  <p id="value_display"></p>
+</div>
+
       <button onClick="passwordGenerator()">Generate passwords</button>
       <hr />
       <div class="row">
