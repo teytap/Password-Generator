@@ -25,7 +25,8 @@
       <h1 class="headerTwo">Random password</h1>
       <p class="slogan">Never use an insecure password again.</p>
       <hr>
-<p id="check-box-message"></p>
+      <div class="row">
+        <div class="check-col"><p id="check-box-message"></p>
 <fieldset>
   <legend>Check character type you want</legend>
   <div>
@@ -41,12 +42,15 @@
     <label for="special-char">Special characters</label>
   </div>
 </fieldset>
-
-<div class="slidecontainer">
+</div>
+        <div class="slidecontainer">
   <p>How many characters do you want?: <span id="value_display">15</span></p>
   <input type="range" min="4" max="64" value="15" id="main" onInput="change_value()">
   <p id="value_display"></p>
 </div>
+</div>
+      
+
 
       <button onClick="passwordGenerator()">Generate passwords</button>
       <hr />

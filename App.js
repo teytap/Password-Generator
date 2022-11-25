@@ -96,20 +96,23 @@ function passwordGenerator() {
   let alfaEl = document.getElementById("alfa");
   let specialCharEl = document.getElementById("special-char");
   let chars = [];
+  let checkMessage = document.getElementById("check-box-message");
   if (!numericEl.checked && !alfaEl.checked && !specialCharEl.checked) {
-    let checkMessage = document.getElementById("check-box-message");
     checkMessage.textContent = "Check at least one type!";
 
     return 0;
   }
   if (numericEl.checked) {
     chars = chars.concat(numerics);
+    checkMessage.textContent = "";
   }
   if (alfaEl.checked) {
     chars = chars.concat(alfas);
+    checkMessage.textContent = "";
   }
   if (specialCharEl.checked) {
     chars = chars.concat(specialChars);
+    checkMessage.textContent = "";
   }
   passwordEl1.value = "";
   passwordEl2.value = "";
