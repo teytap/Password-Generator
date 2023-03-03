@@ -20,49 +20,74 @@
     <title>Password-Generator</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" data-theme="dark">
+      <div class="controller-row">
+        <label class="switch">
+          <input id="toggler" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
       <h1>Generate a</h1>
       <h1 class="headerTwo">Random password</h1>
       <p class="slogan">Never use an insecure password again.</p>
-      <hr>
+      <hr />
       <div class="row">
-        <div class="check-col"><p id="check-box-message"></p>
-<fieldset>
-  <legend>Check character type you want</legend>
-  <div>
-    <input type="checkbox" id="numeric" name="array" value="numeric" checked="checked"/>
-    <label for="numeric">Numeric</label>
-  </div>
-  <div>
-    <input type="checkbox" id="alfa" name="array" value="alfa" />
-    <label for="alfa">Alfa</label>
-  </div>
-  <div>
-    <input type="checkbox" id="special-char" name="array" value="special-char" />
-    <label for="special-char">Special characters</label>
-  </div>
-</fieldset>
-</div>
+        <div class="check-col">
+          <p id="check-box-message"></p>
+          <fieldset>
+            <legend>Check character type you want</legend>
+            <div>
+              <input
+                type="checkbox"
+                id="numeric"
+                name="array"
+                value="numeric"
+                checked="checked"
+              />
+              <label for="numeric">Numeric</label>
+            </div>
+            <div>
+              <input type="checkbox" id="alfa" name="array" value="alfa" />
+              <label for="alfa">Alfa</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="special-char"
+                name="array"
+                value="special-char"
+              />
+              <label for="special-char">Special characters</label>
+            </div>
+          </fieldset>
+        </div>
         <div class="slidecontainer">
-  <p>How many characters do you want?: <span id="value_display">15</span></p>
-  <input type="range" min="4" max="64" value="15" id="main" onInput="change_value()">
-  <p id="value_display"></p>
-</div>
-</div>
-      
-
+          <p>
+            How many characters do you want?: <span id="value_display">15</span>
+          </p>
+          <input
+            type="range"
+            min="4"
+            max="64"
+            value="15"
+            id="main"
+            onInput="change_value()"
+          />
+          <p id="value_display"></p>
+        </div>
+      </div>
 
       <button onClick="passwordGenerator()">Generate passwords</button>
       <hr />
       <div class="row">
         <div class="col">
-          <span><input type="text" id="password1"></input></span>
+          <span><input type="text" id="password1" /></span>
           <span
             ><a href="#" id="copy"><i class="fa-regular fa-copy"></i></a
           ></span>
         </div>
         <div class="col">
-          <span><input type="text" id="password2"></input></span>
+          <span><input type="text" id="password2" /></span>
           <span
             ><a href="#" id="copy2"><i class="fa-regular fa-copy"></i></a
           ></span>

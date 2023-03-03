@@ -91,6 +91,13 @@ let copyEl = document.getElementById("copy");
 let copyEl2 = document.getElementById("copy2");
 let val = 15;
 
+let container = document.querySelector(".container");
+document.getElementById("toggler").addEventListener("change", (event) => {
+  event.target.checked
+    ? container.removeAttribute("data-theme")
+    : container.setAttribute("data-theme", "dark");
+});
+
 function passwordGenerator() {
   let numericEl = document.getElementById("numeric");
   let alfaEl = document.getElementById("alfa");
