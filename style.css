@@ -47,7 +47,7 @@ button:hover {
 }
 .container {
   background: var(--bg-color);
-  width: 550px;
+  max-width: 550px;
   color: var(--p-color);
   display: block;
   margin: 0 auto;
@@ -64,7 +64,7 @@ button:hover {
 }
 .col {
   background: #273549;
-  width: 240px;
+  min-width: 200px;
   height: 36px;
   border-radius: 6px;
   margin-top: 30px;
@@ -194,4 +194,32 @@ input:checked + .slider:before {
 
 .fa-copy:active {
   color: #4adf86;
+}
+@media (max-width: 550px) {
+  h1 {
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .container {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 30px;
+  }
+  .row {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .col {
+    margin-top: 20px;
+  }
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .slidecontainer {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
